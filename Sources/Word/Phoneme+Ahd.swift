@@ -9,6 +9,7 @@ public extension String {
             "ä": "ɑː",
             "ĕ": "ɛ",
             "ē": "iː",
+            "e": "iː",
             "ĭ": "ɪ",
             "ī": "aɪ",
             "îr": "ɪər",
@@ -88,7 +89,7 @@ public extension String {
                 if substring.hasPrefix(key) {
                     if let char = key.first, isBreak(char: char) {
                         if isPrimaryStress(char: char) || isSecondaryStress(char: char) {
-                            if let idx = result.lastIndex(where: isRegularBreak) {
+                            if let idx = result.lastIndex(where: isBreak) {
                                 result.replaceSubrange(idx...idx, with: key)
                             } else {
                                 result.insert(char, at: result.startIndex)

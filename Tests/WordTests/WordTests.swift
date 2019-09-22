@@ -8,7 +8,8 @@ final class WordTests: XCTestCase {
         let cases = [
             ("ârō-spās′", "'ɛər.oʊˌspeɪs"),
             ("sər-mīz′", "sərˌmaɪz"),
-            ("strông", "strɔːŋ")
+            ("strông", "strɔːŋ"),
+            ("âre-ə", "'ɛər.iː.ə")
         ]
 
         for test in cases {
