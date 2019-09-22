@@ -5,8 +5,8 @@ public enum Phoneme: Ipa {
     case b      // bit
     case t      // tin
     case d      // din
-    case ʧ     // cheap
-    case ʤ     // jeep
+    case ʧ      // cheap
+    case ʤ      // jeep
     case k      // cut
     case ɡ      // gut
     case f      // fat
