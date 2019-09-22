@@ -1,8 +1,8 @@
-public struct Syllable: Equatable {
-    public enum Stress: Equatable {
-        case primary
-        case secondary
-        case none
+public struct Syllable: Equatable, Codable {
+    public enum Stress: Int, Equatable, Codable {
+        case primary = 1
+        case secondary = 2
+        case none = 0
 
     }
     public let sound: Ipa

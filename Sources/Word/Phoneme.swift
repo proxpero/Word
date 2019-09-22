@@ -1,6 +1,6 @@
 public typealias Ipa = String
 
-public enum Phoneme: Ipa {
+public enum Phoneme: Ipa, Codable {
     case p      // pit
     case b      // bit
     case t      // tin

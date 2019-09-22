@@ -1,12 +1,12 @@
-public struct Word {
+public struct Word: Codable {
     public let text: String
-    public let frequency: Double
+    public let frequency: Double?
     public let syllables: [Syllable]
     public let pronunciation: [Ipa]
     public let definitions: [Definition]
 }
 
-public struct Definition {
+public struct Definition: Codable {
     public let definition: String
     public let partOfSpeech: PartOfSpeech
     public let synonyms: [Word]?

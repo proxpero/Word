@@ -1,4 +1,4 @@
-public enum PartOfSpeech {
+public enum PartOfSpeech: String, Codable {
     case noun
     case verb
     case adjective
