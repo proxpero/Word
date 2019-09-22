@@ -1,7 +1,7 @@
 import Foundation
 
 public extension String {
-    func convertAhd() -> Ipa {
+    func convertAhd() throws -> Ipa {
         let ahds = [
             "ă": "æ",
             "ā": "eɪ",
@@ -98,6 +98,8 @@ public extension String {
                     }
                     substring = substring.dropFirst(key.count)
                     break
+                } else {
+                    throw Error.init(text: self)
                 }
             }
         }

@@ -2,7 +2,7 @@ import XCTest
 @testable import Word
 
 final class WordTests: XCTestCase {
-    func testAhdConversion() {
+    func testAhdConversion() throws {
 
         typealias Case = (String, String)
         let cases = [
@@ -12,7 +12,7 @@ final class WordTests: XCTestCase {
         ]
 
         for test in cases {
-            XCTAssertEqual(test.1, test.0.convertAhd())
+            XCTAssertEqual(test.1, try test.0.convertAhd())
         }
     }
 
