@@ -7,12 +7,20 @@ final class WordTests: XCTestCase {
         typealias Case = (String, String)
         let cases = [
             ("ârō-spās′", "'ɛər.oʊˌspeɪs"),
-            ("sər-mīz′", "sər'maɪz"),
+            ("sər-mīz′", "sərˌmaɪz"),
             ("strông", "strɔːŋ")
         ]
 
         for test in cases {
             XCTAssertEqual(test.1, try test.0.convertAhd())
+        }
+
+        let errors = [
+            "sər,-sār"
+        ]
+
+        for test in errors {
+            XCTAssertThrowsError(try test.convertAhd())
         }
     }
 

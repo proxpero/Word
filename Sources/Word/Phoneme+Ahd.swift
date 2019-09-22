@@ -82,8 +82,10 @@ public extension String {
         let values = ahds.sorted(by: { $0.key.count > $1.key.count })
         while !substring.isEmpty {
             for (key, value) in values {
+                if substring.hasPrefix(",") {
+                    throw Error.init(text: self)
+                }
                 if substring.hasPrefix(key) {
-
                     if let char = key.first, isBreak(char: char) {
                         if isPrimaryStress(char: char) || isSecondaryStress(char: char) {
                             if let idx = result.lastIndex(where: isRegularBreak) {
@@ -99,8 +101,6 @@ public extension String {
                     substring = substring.dropFirst(key.count)
                     break
                 }
-            } else {
-                throw Error.init(text: self)
             }
         }
         if result.hasSuffix(".") {
