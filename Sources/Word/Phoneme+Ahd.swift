@@ -98,9 +98,9 @@ public extension String {
                     }
                     substring = substring.dropFirst(key.count)
                     break
-                } else {
-                    throw Error.init(text: self)
                 }
+            } else {
+                throw Error.init(text: self)
             }
         }
         if result.hasSuffix(".") {
