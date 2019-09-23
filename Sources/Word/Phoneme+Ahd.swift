@@ -40,7 +40,7 @@ public extension String {
             "əl": "l",
             "m": "m",
             "n": "n",
-            "ən": "n",
+//            "ən": "n",
             "ng": "ŋ",
             "p": "p",
             "r": "r",

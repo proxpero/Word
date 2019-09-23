@@ -6,10 +6,11 @@ final class WordTests: XCTestCase {
 
         typealias Case = (String, String)
         let cases = [
-            ("ârō-spās′", "'ɛər.oʊˌspeɪs"),
-            ("sər-mīz′", "sərˌmaɪz"),
-            ("strông", "strɔːŋ"),
-            ("âre-ə", "'ɛər.iː.ə")
+//            ("ârō-spās′", "'ɛər.oʊˌspeɪs"),
+//            ("sər-mīz′", "sərˌmaɪz"),
+//            ("strông", "strɔːŋ"),
+//            ("âre-ə", "'ɛər.iː.ə"),
+            ("ĭk-sītmənt", "ɪk'saɪt.mənt")
         ]
 
         for test in cases {
