@@ -23,6 +23,12 @@ public extension String {
             result.append(syllable)
             substring = self[startIndex..<idx]
         }
+        if !substring.isEmpty {
+            result.append(.init(
+                sound: String(substring),
+                stress: .none)
+            )
+        }
         return result.reversed()
     }
 }

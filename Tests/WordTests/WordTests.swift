@@ -36,7 +36,32 @@ final class WordTests: XCTestCase {
         XCTAssertEqual(expectation, input.syllabize())
     }
 
+
+
     static var allTests = [
         ("testAhdConversion", testAhdConversion),
     ]
+}
+
+final class SyllableTests: XCTestCase {
+
+    func testAerospace() {
+        let input = "'ɛər.oʊˌspeɪs"
+        let expectation: [Syllable] = [
+            .init(sound: "ɛər", stress: .primary),
+            .init(sound: "oʊ", stress: .none),
+            .init(sound: "speɪs", stress: .secondary)
+        ]
+        XCTAssertEqual(expectation, input.syllabize())
+    }
+
+    func testEnactment() {
+        let input = "ɛn'ækt.mənt"
+        let expectation: [Syllable] = [
+            .init(sound: "ɛn", stress: .none),
+            .init(sound: "ækt", stress: .primary),
+            .init(sound: "mənt", stress: .none)
+        ]
+        XCTAssertEqual(expectation, input.syllabize())
+    }
 }
