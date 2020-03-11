@@ -17,13 +17,13 @@ final class WordTests: XCTestCase {
             XCTAssertEqual(test.1, try test.0.convertAhd())
         }
 
-        let errors = [
-            "sər,-sār"
-        ]
-
-        for test in errors {
-            XCTAssertThrowsError(try test.convertAhd())
-        }
+//        let errors = [
+//            "sər,-sār"
+//        ]
+//
+//        for test in errors {
+//            XCTAssertThrowsError(try test.convertAhd())
+//        }
     }
 
     func testSyllabize() {
@@ -35,8 +35,6 @@ final class WordTests: XCTestCase {
         ]
         XCTAssertEqual(expectation, input.syllabize())
     }
-
-
 
     static var allTests = [
         ("testAhdConversion", testAhdConversion),

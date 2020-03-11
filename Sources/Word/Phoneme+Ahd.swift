@@ -85,7 +85,8 @@ public extension String {
         while !substring.isEmpty {
             for (key, value) in values {
                 if substring.hasPrefix(",") {
-                    throw Error.init(text: self)
+                    substring = ""
+//                    throw Error.init(text: self)
                 }
                 if substring.hasPrefix(key) {
                     if let char = key.first, isBreak(char: char) {
